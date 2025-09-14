@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+.link {
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.link::after {
+    content: "";
+    background-color: #8a8a92;
+    width: 100%;
+    border-radius: 10px ;
+    height: 3px;
+    position: absolute;
+    top: 1.4rem;
+    left: 0;
+    clip-path: circle(0 at bottom);
+    transition: clip-path .5s;
+}
+
+.link:hover.link::after {   
+    clip-path: circle(100% at top);
+}
